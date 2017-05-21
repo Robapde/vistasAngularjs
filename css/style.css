@@ -1,0 +1,94 @@
+/*--HEADER---*/
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.jumbotron-header {
+    background: #428bca;
+    color: #fff;
+    padding: 20px 0;
+}
+
+
+/*-- POST --*/
+/*--LOGISTUDENT--*/
+
+#login-form-link{
+    width: 100%;
+    text-align: center;
+    float: center;
+    color: #fff;  
+    font: 50px sans-serif;
+}
+#loginStudent-submit{
+    background: #428bca;
+    color: #fff;
+}
+
+#loginStudent-view{
+    padding: 20px 0;
+    margin-left: 10%;
+}
+/*-- profilestudent -- */
+
+/*#name-student{
+    
+}*/
+.main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.post {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #999;
+}
+
+.post .post-title a {
+    color: #333;
+}
+.post .thumb {
+    margin-right: 10px;
+    width: 40%;
+}
+
+.post .thumb img {
+    width:  100%;
+}
+
+.post .contenedor-botones {
+    width:  100%;
+}
+
+/* -- Media Querie -- */
+
+@media screen and ( max-width: 768px){
+     #profile-id{
+        width:  1000%;
+        margin-bottom: 20 px;
+        margin-right: 0;
+    }
+    #loginStudent-view{
+    padding: 20px 0;
+    margin-left: 0;
+}
+
+    
+}
+
+@media screen and (max-width: 412px){
+    #profile-id{
+        width:  100%;
+        margin-bottom: 20 px;
+        margin-right: 0;
+    }
+
+    #loginStudent-view{
+    padding: 20px 0;
+    margin-left: 0;
+}
+  
+    
+}

@@ -1,0 +1,82 @@
+<div class="container" ng-controller="loginController as vm">
+    <div class="row">
+        <div class="col-md-12" id="profile-id">
+            <div class="panel panel-info">
+                <div class="panel-heading" id="name-student">
+                    <h3 class="panel-title">
+
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div ng-if="!vm.sexStudent()" class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png"
+                                class="img-circle img-responsive"/> </div>
+
+                        <div ng-if="vm.sexStudent()" class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://soloparareir.files.wordpress.com/2007/10/cv.jpg"  
+                                 class="img-circle img-responsive"/> </div>
+
+                        <div class=" col-md-9 col-lg-9 ">
+                            <table class="table table-user-information">
+
+
+
+                                <tbody>
+                                    <tr>
+                                        <td>Name:</td>
+                                        <td><span>{{vm.currentStudent.studentName}} </span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>LastName:</td>
+                                        <td> <span>{{vm.currentStudent.lastNameParent1}} </span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>LastName:</td>
+                                        <td><span>{{vm.currentStudent.lastNameParent2}} </span> </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Date of Birth</td>
+                                        <td><span>{{vm.currentStudent.dateOfBirth}}<span></td>
+                                    </tr>
+
+                                    
+                                        <tr>
+                                            <td>Gender</td>
+                                            <td><span>{{vm.currentStudent.sex}}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Home Address</td>
+                                        <td><span>{{vm.currentStudent.address}}<span></td>
+                                        </tr>
+                                     <tr>
+                                            <td>Email</td>
+                                            <td><span>{{vm.currentStudent.email}}<span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Telephone Number</td>
+                                        <td><span>{{vm.currentStudent.telephone}}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mobilphone Number</td>
+                                        <td><span>{{vm.currentStudent.mobilePhone}}</span> </td>
+                                    </tr>
+                                    
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+                    <span class="pull-right">
+                            <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                        </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
