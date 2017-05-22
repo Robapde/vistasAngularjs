@@ -1,6 +1,6 @@
 <div class="container" ng-controller="loginController as vm">
     <div class="row">
-        <div  class="col-md-12" id="profile-id">
+        <div class="col-md-12" id="profile-id" >
             <div class="panel panel-info">
                 <div class="panel-heading" id="name-student">
                     <h3 class="panel-title">
@@ -9,44 +9,32 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div ng-if="!vm.sexStudent()" class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png"
-                                class="img-circle img-responsive" /> </div>
-
-                        <div ng-if="vm.sexStudent()" class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://soloparareir.files.wordpress.com/2007/10/cv.jpg" class="img-circle img-responsive"
-                            /> </div>
 
                         <div class=" col-md-9 col-lg-9 ">
                             <table class="table table-user-information">
 
-
-
                                 <tbody>
                                     <tr>
-                                        <td>Name:</td>
-                                        <td><span>{{vm.currentStudent.studentName}} </span> </td>
+                                        <td >Subject Name:</td>
+                                        <td ><span>{{vm.subject.subjectName}} </span> </td>
                                     </tr>
                                     <tr>
-                                        <td>LastName:</td>
-                                        <td> <span>{{vm.currentStudent.lastNameParent1}} </span> </td>
+                                        <td>Subject Abbreviation:</td>
+                                        <td> <span>{{vm.subject.abbreviation}} </span> </td>
                                     </tr>
                                     <tr>
-                                        <td>LastName:</td>
-                                        <td><span>{{vm.currentStudent.lastNameParent2}} </span> </td>
+                                        <td>Mark First Trimester:</td>
+                                        <td><span>{{vm.mark[0]}} </span> </td>
                                     </tr>
 
                                     <tr>
-                                        <td>Date of Birth</td>
-                                        <td><span>{{vm.currentStudent.dateOfBirth}}<span></td>
+                                        <td>Mark Second Trimester</td>
+                                        <td><span>{{vm.mark[1]}}<span></td>
                                     </tr>
 
-                                    
-                                        <tr>
-                                            <td>Gender</td>
-                                            <td><span>{{vm.currentStudent.sex}}</span></td>
-                                    </tr>
                                     <tr>
-                                        <td>Home Address</td>
-                                        <td><span>{{vm.currentStudent.address}}<span></td>
+                                        <td>Mark Third Trimester</td>
+                                        <td><span>{{vm.mark[2]}}<span></td>
                                         </tr>
                                      <tr>
                                             <td>Email</td>
@@ -68,11 +56,11 @@
                         </div>
                     </div>
 
-                <div class="panel-footer">
-                
-                </div>
+                    <div class="panel-footer">
 
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
-</div>

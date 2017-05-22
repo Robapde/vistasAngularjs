@@ -34,7 +34,7 @@
                                     </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a ui-sref="loginStudent">Student Login</a></li>
-                                <li><a ui-sref="#">Staff Login</a></li>
+                                <li><a ui-sref="#" >Staff Login</a></li>
                             </ul>
                         </li>
                         <li class="dropdown" ng-if="!vm.isLoggedStudent()">
@@ -51,9 +51,9 @@
                                         My Account <span class="caret"></span>
                                     </a>
                             <ul  class="dropdown-menu" role="menu" >
-                                <li><a ui-sref="profileStudent">Profile</a></li>
+                                <li><a  ui-sref="profileStudent" >Profile</a></li>
                                 <li >
-                                    <a ui-sref="#" ng-repeat="sub in x.currentStudent.scoredRecord" >{{sub.subject.subjectName}}</a>
+                                    <a  ng-repeat="sub in x.currentStudent.scoredRecord" ng-click="x.getSubject( sub.subject,sub.firstTrimester,sub.secondTrimester,sub.thirdTrimester)" ng-change="x.getSubject( sub.subject,sub.firstTrimester,sub.secondTrimester,sub.thirdTrimester)" ng-model="subjectArray" ui-sref="profileStudentSubject" >{{sub.subject.subjectName}}</a>
                                 </li>
 
                             </ul>

@@ -3,7 +3,7 @@
     var App = angular.module("App", ['ui.router']);
     App.config(function ($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise("profileStudent");
+        $urlRouterProvider.otherwise("loginStudent");
 
         $stateProvider
             .state('loginStudent', {
@@ -21,6 +21,12 @@
             .state('profileStudent', {
                 url: "/profileStudent",
                 templateUrl: "templates/profileStudent.html",
+                controller: 'loginController',
+                controllerAs: 'vm'
+            })
+            .state('profileStudentSubject', {
+                url: "/profileStudentSubject",
+                templateUrl: "templates/profileStudentSubject.html",
                 controller: 'loginController',
                 controllerAs: 'vm'
             })

@@ -4,6 +4,10 @@
     function studentFactory($http){ 
         
         var currentStudent;
+
+        var currentSubject;
+        
+        var currentMark; 
           
         var interface = {            
             //Methods of the service
@@ -33,6 +37,19 @@
             },
             isLogged: function(){
                 return typeof(currentStudent) !== "undefined"
+            },
+            
+            getSubject: function(){
+                return currentSubject;
+            },
+            setSubject: function(subject){
+                currentSubject = subject;
+            },
+            getMark: function(){
+                return currentMark;
+            },
+            setMark: function(firstTrimester, secondTrimester, thirdTrimester){
+                currentMark = [firstTrimester, secondTrimester, thirdTrimester]; 
             }
         }
         return interface;

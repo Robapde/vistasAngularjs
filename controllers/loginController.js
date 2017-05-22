@@ -6,8 +6,11 @@
     function loginController(studentFactory, $state, $stateParams) {
         var vm = this;
         vm.currentStudent = studentFactory.getCurrentStudent();
+        vm.subject = studentFactory.getSubject();
+        vm.mark = studentFactory.getMark();
 
         vm.profile = true;
+
         vm.loginStudent = function () {
             studentFactory.login(vm.email, vm.password)
                 .then(function (response) {
@@ -22,9 +25,9 @@
                         vm.msgerror = "Email o contraseña incorrecto";
 
                     } else {
-                        console.log('Hola', vm.currentStudent.studentName);
                         studentFactory.setCurrentStudent(vm.currentStudent);
                         $state.go('profileStudent');
+                        console.log(vm.subject);
                     }
                 }, function (response) {
                     vm.error = true;
@@ -57,19 +60,35 @@
         };
 
         vm.sexStudent = function () {
-             
+
             if (vm.currentStudent.sex == 'female') {
 
                 return false;
-                
-            console.log(vm.currentStudent.sex);
-            console.log(false);
+
+
             } else if (vm.currentStudent.sex == 'male') {
                 return true;
-                
-            console.log(true);
+
             }
-        }
+        };
+
+        //objeto asignatura
+
+
+        vm.getSubject = function (subject, firstTrimester, secondTrimester, thirdTrimester) {
+         
+            studentFactory.setSubject(subject);
+            studentFactory.setMark(firstTrimester, secondTrimester, thirdTrimester);
+            $state.reload();
+            console.log(studentFactory.getSubject());
+        };
+
+        vm.changedSubject = function(){
+            
+            vm.subject = studentFactory.getSubject();
+        };
+    
+  
     }
 
 }()); // Sintáxis JS para invocación inmediata
